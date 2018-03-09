@@ -10,3 +10,7 @@ deploy:
      file: 
          - test.php
      skip_cleanup: true
+     branches:
+        only:
+          - development
+          - master 
