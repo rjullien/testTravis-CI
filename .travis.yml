@@ -10,6 +10,3 @@ deploy:
      file: 
          - test.php
      skip_cleanup: true
-     on:
-         repo: https://github.com/rjullien/testTravis-CI.git
-   
