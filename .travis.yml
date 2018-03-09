@@ -1,5 +1,16 @@
 language: php
 php:
   - 5.6
-script: find . -type f -name *.php | xargs -n1 php -l 
-script: echo ${TRAVIS_BUILD_DIR};ls -altr ${TRAVIS_BUILD_DIR}
+script: 
+  - find . -type f -name *.php | xargs -n1 php -l 
+  - echo ${TRAVIS_BUILD_DIR};ls -altr ${TRAVIS_BUILD_DIR}
+deploy:
+     provider: releases
+     api_key:
+         secure: $GH_TOKEN
+     file: 
+         - test.php
+     skip_cleanup: true
+     on:
+         repo: https://github.com/rjullien/testTravis-CI
+      
