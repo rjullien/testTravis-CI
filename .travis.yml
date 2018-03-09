@@ -10,7 +10,8 @@ deploy:
      file: 
          - test.php
      skip_cleanup: true
-     branches:
-        only:
-          - development
+     on: 
+       repo: rjullien/testTravis-CI
+       branches:
+          only:
           - master 
